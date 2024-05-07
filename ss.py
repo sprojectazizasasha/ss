@@ -232,6 +232,18 @@ with tab6:
     "Maximum drawdown measures your assets’ largest price drop from a peak to a trough. It serves as an indicator of downside risk, with large MDDs suggesting that down movements could be volatile."
     st.image("senior-drawdown-peak-to-trough.png", use_column_width = True)
 
+with tab7:
+    # Compute the correlation matrix
+    if 'portfolio' in returns.columns and 'invested' in returns.columns:
+        returns = returns.drop(['portfolio', 'invested'], axis = 1)
+
+    correlation_matrix = returns.corr()
+    
+    # Plot a heatmap of the correlations
+    fig=plt.figure(figsize=(10, 8))
+    sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=.05)
+    plt.title('Correlation Matrix of Cryptocurrency Returns')
+    st.pyplot(fig)
 with tab9:
     st.image("IMAGE 2024-05-07 14:33:09.jpg", use_column_width = True)
     
