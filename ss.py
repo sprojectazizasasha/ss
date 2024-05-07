@@ -254,6 +254,7 @@ with tab8:
         st.image("aggr3.jpeg", use_column_width = True)
 
     st.divider()
+    "Some text here"
     st.image("cdg.jpeg", use_column_width = True)
 
 with tab9:
