@@ -252,7 +252,9 @@ with tab8:
         st.image("aggr2.jpeg", use_column_width = True)
     else:
         st.image("aggr3.jpeg", use_column_width = True)
-        
+
+    st.image("cdj.jpeg", use_column_width = True)
+
 with tab9:
     st.image("IMAGE 2024-05-07 14:33:09.jpg", use_column_width = True)
     
