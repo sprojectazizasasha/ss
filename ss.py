@@ -153,7 +153,7 @@ with tab5:
     st.pyplot(fig)
     returns = returns.drop('portfolio', axis =1)
 
-    "Sharpe Ratio describes how much excess return you receive for the volatility of holding your assets."
+    "Sharpe Ratio describes how much excess return you receive for the volatility of holding your assets. A higher Sharpe Ratio indicates that the asset has better risk-adjusted performance."
 
 with tab6:
 
@@ -203,7 +203,7 @@ with tab6:
                       title_x=0.5)
     st.plotly_chart(fig)
     
-    "VaR estimates how much your portfolio might lose with a chosen probability."
+    "VaR estimates the maximum loss that your portfolio is likely to experience (a threshold that losses are unlikely to exceed) within a certain period and with a chosen probability."
     
     #plot
     import plotly.express as px
@@ -216,7 +216,7 @@ with tab6:
                       title_x=0.5)
     st.plotly_chart(fig)
     
-    "The expected shortfall at the chosen level is the expected loss on the portfolio in the worst of cases."
+    "The expected shortfall at the chosen level is the average loss on the portfolio in the worst-case scenarios (beyond the VaR threshold)."
     st.image("photo_2024-05-06 21.44.28.jpeg", use_column_width = True)
 
 
@@ -241,7 +241,7 @@ with tab7:
     st.pyplot(fig)
 
     st.divider()
-    "Maximum drawdown measures your assets’ largest price drop from a peak to a trough. It serves as an indicator of downside risk, with large MDDs suggesting that down movements could be volatile."
+    "Maximum drawdown measures your assets’ largest price drop from a peak to a trough, it is an indicator of a downside risk. "
     st.image("senior-drawdown-peak-to-trough.png", use_column_width = True)
 
 
