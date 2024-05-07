@@ -121,7 +121,7 @@ with tab3:
     # Plot a heatmap of the correlations
     fig=plt.figure(figsize=(10, 8))
     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=.05)
-    plt.title('Correlat
+    plt.title('Correlation matrix')
 
 with tab4:
     returns['portfolio'] = returns.dot(weights)
