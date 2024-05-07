@@ -237,6 +237,7 @@ with tab7:
     if 'portfolio' in returns.columns and 'invested' in returns.columns:
         returns = returns.drop(['portfolio', 'invested'], axis = 1)
 
+    import seaborn as sns
     correlation_matrix = returns.corr()
     
     # Plot a heatmap of the correlations
