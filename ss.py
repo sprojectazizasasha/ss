@@ -256,5 +256,5 @@ with tab8:
 
 with tab9:
     st.image("t-sne.png", use_column_width = True)
-    "The absence of clear clusters in the t-SNE plot implies that the returns of cryptocurrencies in your portfolio do not form distinct groups with similar behavior, and are influenced by a variety of factors. Clustering can indicate periods of similar performance or similar reactions to market events among the assets within the portfolio."
+    "Clustering can indicate periods of similar performance or similar reactions to market events among the assets within the portfolio. The absence of clear clusters in the t-SNE plot implies that the returns of cryptocurrencies in your portfolio do not form distinct groups with similar behavior, and are influenced by a variety of factors."
     
