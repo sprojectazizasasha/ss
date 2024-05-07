@@ -233,6 +233,6 @@ with tab6:
     st.image("senior-drawdown-peak-to-trough.png", use_column_width = True)
 
 with tab9:
-    st.image("senior-drawdown-peak-to-trough.png", use_column_width = True)
+    st.image("IMAGE 2024-05-07 14:33:09.jpg", use_column_width = True)
     
     
