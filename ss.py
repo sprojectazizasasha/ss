@@ -37,7 +37,7 @@ st.title("Cryptocurrencies research")
 
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([
     'assumptions', 'portfolio', 'Volatility', 'Sharpe Ratio', 'VaR', 'DrawDown',
-    'Correlaton','Coupla-based VaR', 'Clustering'])
+    'Correlation','Coupla-based VaR', 'Clustering'])
 
 with tab1:
     import numpy as np
@@ -253,6 +253,7 @@ with tab8:
     else:
         st.image("aggr3.jpeg", use_column_width = True)
 
+    st.divider()
     st.image("cdg.jpeg", use_column_width = True)
 
 with tab9:
