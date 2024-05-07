@@ -44,7 +44,10 @@ with tab1:
     "Choose your Risk Appetite",
     ("Aggressive", "Medium", "LowRisk"))
     if option == 'Aggresive':
-        weights = [0.2, 0.2, 0.1, 0.1, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05]
+        weights = [0.05] * len(cryptos)
+        weights[cryptos.index('Bitcoin Cash')] = 0.20  # Adjust index as necessary
+        weights[cryptos.index('Solana')] = 0.20
+        weights[cryptos.index('Toncoin')] = 0.15
         weights = np.array(weights)
     elif option == 'Medium':
         weights = [1/12] * 12
