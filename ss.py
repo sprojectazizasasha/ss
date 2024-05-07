@@ -1,10 +1,6 @@
 import streamlit as st
 from funcs import *
 
-#data
-#- no API - это платно
-#условились на 12 криптовалют
-#выбранные диапазон данных - 01.05.2022-01.05.2024
 import pandas as pd
 cryptos = [
     'Arbitrum', 'Bitcoin Cash', 'BNB',
@@ -36,8 +32,8 @@ prices = pd.concat(dt_price_container, axis = 1)
 st.title("Cryptocurrencies research")
 
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([
-    'assumptions', 'portfolio', 'Volatility', 'Sharpe Ratio', 'VaR', 'DrawDown',
-    'Correlation','Copula-based VaR', 'Clustering'])
+    'Assumptions', 'Portfolio', 'Volatility', 'Sharpe Ratio', 'VaR', 'DrawDown',
+    'Correlations','Copula-based VaR & ES', 'Clustering'])
 
 with tab1:
     import numpy as np
