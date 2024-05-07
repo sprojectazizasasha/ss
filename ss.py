@@ -247,7 +247,12 @@ with tab7:
     st.pyplot(fig)
 with tab8:
     if option == "Aggressive":
-        st
+        st.image("aggr1.jpeg", use_column_width = True)
+    elif option == "Medium":
+        st.image("aggr2.jpeg", use_column_width = True)
+    else:
+        st.image("aggr3.jpeg", use_column_width = True)
+        
 with tab9:
     st.image("IMAGE 2024-05-07 14:33:09.jpg", use_column_width = True)
     
