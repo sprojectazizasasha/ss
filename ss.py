@@ -41,7 +41,7 @@ tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([
 
 with tab1:
     import numpy as np
-    invested = st.number_input("Choose investment amount, USD", 0, 1000000)
+    invested = st.number_input("Choose investment amount, USD", 0, 1000000, value = 5000)
     #invested = 1000000
     #weights = np.array([.1, .1, .1, .1, .1, .1, .1, .1, .1, .1, .1, .1])
     option = st.selectbox(
