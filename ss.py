@@ -114,10 +114,10 @@ with tab3:
     returns['portfolio'] = returns.dot(weights)
     fig = plt.figure()
     plt.title("Volatility")
-    ax = returns.std().plot.bar()
+    ax = returns.std().sort_values(ascending=False).plot.bar()
     ax.patches[12].set_color('r')
     st.pyplot(fig)
-    returns = returns.drop('portfolio', axis = 1)
+    returns = returns.drop('portfolio', axis=1)
 
 with tab4:
     returns['portfolio'] = returns.dot(weights)
