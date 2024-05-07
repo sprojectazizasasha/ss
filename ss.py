@@ -35,8 +35,9 @@ prices = pd.concat(dt_price_container, axis = 1)
 
 st.title("Cryptocurrencies research")
 
-tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
-    'assumptions', 'portfolio', 'Volatility', 'Sharpe Ratio', 'VaR', 'DrawDown'])
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([
+    'assumptions', 'portfolio', 'Volatility', 'Sharpe Ratio', 'VaR', 'DrawDown',
+    'Correlaton','Coupla-based VaR', 'Clustering'])
 
 with tab1:
     import numpy as np
@@ -230,3 +231,8 @@ with tab6:
     st.divider()
     "Maximum drawdown measures your assets’ largest price drop from a peak to a trough. It serves as an indicator of downside risk, with large MDDs suggesting that down movements could be volatile."
     st.image("senior-drawdown-peak-to-trough.png", use_column_width = True)
+
+with tab9:
+    st.image("senior-drawdown-peak-to-trough.png", use_column_width = True)
+    
+    
