@@ -111,6 +111,19 @@ with tab2:
     # st.dataframe(fr_, hide_index=True, use_container_width = True)
 
 with tab3:
+    # Compute the correlation matrix
+    if 'portfolio' in returns.columns and 'invested' in returns.columns:
+        returns = returns.drop(['portfolio', 'invested'], axis = 1)
+
+    import seaborn as sns
+    correlation_matrix = returns.corr()
+    
+    # Plot a heatmap of the correlations
+    fig=plt.figure(figsize=(10, 8))
+    sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=.05)
+    plt.title('Correlat
+
+with tab4:
     returns['portfolio'] = returns.dot(weights)
     fig = plt.figure()
     plt.title("Volatility")
@@ -122,7 +135,7 @@ with tab3:
     returns = returns.drop('portfolio', axis=1)
 
 
-with tab4:
+with tab5:
     returns['portfolio'] = returns.dot(weights)
     def sharpe_ratio(return_series, N, rf):
             mean = return_series.mean() * N -rf
@@ -142,7 +155,7 @@ with tab4:
 
     "Sharpe Ratio describes how much excess return you receive for the volatility of holding your assets."
 
-with tab5:
+with tab6:
 
     conf_sl = st.slider('Choose Confidence', 95, 99, step = 1, value = 95)
 
@@ -207,7 +220,7 @@ with tab5:
     st.image("photo_2024-05-06 21.44.28.jpeg", use_column_width = True)
 
 
-with tab6:
+with tab7:
     prices['portfolio'] = prices.dot(weights)
     def max_drawdown_ctm(prices):
         dd_cont={}
@@ -231,19 +244,7 @@ with tab6:
     "Maximum drawdown measures your assets’ largest price drop from a peak to a trough. It serves as an indicator of downside risk, with large MDDs suggesting that down movements could be volatile."
     st.image("senior-drawdown-peak-to-trough.png", use_column_width = True)
 
-with tab7:
-    # Compute the correlation matrix
-    if 'portfolio' in returns.columns and 'invested' in returns.columns:
-        returns = returns.drop(['portfolio', 'invested'], axis = 1)
 
-    import seaborn as sns
-    correlation_matrix = returns.corr()
-    
-    # Plot a heatmap of the correlations
-    fig=plt.figure(figsize=(10, 8))
-    sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=.05)
-    plt.title('Correlation Matrix of Cryptocurrency Returns')
-    st.pyplot(fig)
 with tab8:
     if option == "Aggressive":
         st.image("aggr1.jpeg", use_column_width = True)
