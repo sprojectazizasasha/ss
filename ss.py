@@ -42,7 +42,7 @@ with tab1:
     #weights = np.array([.1, .1, .1, .1, .1, .1, .1, .1, .1, .1, .1, .1])
     option = st.selectbox(
     "Choose your Risk Appetite",
-    ("Aggresive", "Medium", "LowRisk"))
+    ("Aggressive", "Medium", "LowRisk"))
     if option == 'Aggresive':
         weights = [0.2, 0.2, 0.1, 0.1, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05]
         weights = np.array(weights)
