@@ -245,6 +245,9 @@ with tab7:
     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=.05)
     plt.title('Correlation Matrix of Cryptocurrency Returns')
     st.pyplot(fig)
+with tab8:
+    if option == "Aggressive":
+        st
 with tab9:
     st.image("IMAGE 2024-05-07 14:33:09.jpg", use_column_width = True)
     
