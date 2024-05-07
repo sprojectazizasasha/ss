@@ -254,8 +254,8 @@ with tab8:
         st.image("aggr3.jpeg", use_column_width = True)
 
     st.divider()
-    "Some text here"
-    st.image("cdg.jpeg", use_column_width = True)
+    "The absence of clear clusters in the t-SNE plot implies that the returns of cryptocurrencies in your portfolio do not form distinct groups with similar behavior, and are influenced by a variety of factors. Clustering can indicate periods of similar performance or similar reactions to market events among the assets within the portfolio."
+    st.image("t-sne", use_column_width = True)
 
 with tab9:
     st.image("IMAGE 2024-05-07 14:33:09.jpg", use_column_width = True)
