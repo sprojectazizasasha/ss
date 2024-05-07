@@ -37,7 +37,7 @@ st.title("Cryptocurrencies research")
 
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([
     'assumptions', 'portfolio', 'Volatility', 'Sharpe Ratio', 'VaR', 'DrawDown',
-    'Correlation','Coupla-based VaR', 'Clustering'])
+    'Correlation','Copula-based VaR', 'Clustering'])
 
 with tab1:
     import numpy as np
