@@ -254,7 +254,7 @@ with tab8:
         st.image("aggr3.jpeg", use_column_width = True)
 
     st.divider()
-    st.image("t-sne.png", use_column_width = True)
+    st.image("cdg.jpeg", use_column_width = True)
 
 with tab9:
     st.image("t-sne.png", use_column_width = True)
