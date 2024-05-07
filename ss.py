@@ -32,8 +32,8 @@ prices = pd.concat(dt_price_container, axis = 1)
 st.title("Cryptocurrencies research")
 
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([
-    'Assumptions', 'Portfolio', 'Volatility', 'Sharpe Ratio', 'VaR', 'DrawDown',
-    'Correlations','Copula-based VaR & ES', 'Clustering'])
+    'Assumptions', 'Portfolio', 'Correlations', 'Volatility', 'Sharpe Ratio', 'VaR', 'DrawDown',
+    'Copula-based VaR & ES', 'Clustering'])
 
 with tab1:
     import numpy as np
@@ -121,8 +121,8 @@ with tab3:
     # Plot a heatmap of the correlations
     fig=plt.figure(figsize=(10, 8))
     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=.05)
-    plt.title('Correlation matrix')
-
+    plt.title('Correlation matrix of cryptocurrency returns')
+    st.pyplot(fig)
 with tab4:
     returns['portfolio'] = returns.dot(weights)
     fig = plt.figure()
