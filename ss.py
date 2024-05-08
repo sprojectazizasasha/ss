@@ -43,7 +43,7 @@ with tab1:
     option = st.selectbox(
     "Choose your Risk Appetite",
     ("Aggressive", "Medium", "LowRisk"))
-    if option == 'Aggresive':
+    if option == 'Aggressive':
         weights = [0.05] * len(cryptos)
         weights[cryptos.index('Bitcoin Cash')] = 0.20  # Adjust index as necessary
         weights[cryptos.index('Solana')] = 0.20
