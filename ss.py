@@ -158,7 +158,8 @@ with tab5:
     ax.patches[portfolio_index].set_color('red')
     st.pyplot(fig)
 
-
+    returns = returns.drop('portfolio', axis=1)
+    
     "Sharpe Ratio describes how much excess return you receive for the volatility of holding your assets. A higher Sharpe Ratio indicates that the asset has better risk-adjusted performance."
 
 with tab6:
