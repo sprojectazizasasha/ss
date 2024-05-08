@@ -140,9 +140,6 @@ with tab4:
 
 
 with tab5:
-
-    returns
-    
     returns['portfolio'] = returns.dot(weights)
     def sharpe_ratio(return_series, N, rf):
             mean = return_series.mean() * N -rf
@@ -161,7 +158,7 @@ with tab5:
     ax.patches[portfolio_index].set_color('red')
     st.pyplot(fig)
 
-    #returns = returns.drop('portfolio', axis=1)
+    returns = returns.drop('portfolio', axis=1)
     
     "Sharpe Ratio describes how much excess return you receive for the volatility of holding your assets. A higher Sharpe Ratio indicates that the asset has better risk-adjusted performance."
 
