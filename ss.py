@@ -146,7 +146,7 @@ with tab5:
             sigma = return_series.std() * np.sqrt(N)
             return mean/sigma
     N = 255
-    rf = 0.01
+    rf = 0.04
     sharpes = returns.apply(sharpe_ratio, args=(N, rf), axis = 0).round(4)
 
     fig = plt.figure()
