@@ -152,10 +152,12 @@ with tab5:
     fig = plt.figure()
     plt.title('Sharpe Ratio')
     sharpes = sharpes.sort_values(ascending=True)
-    ax = sharpes.plot.bar(color = 'red')
-    ax.patches[11].set_color('b')
+    ax = sharpes.plot.bar(color='blue')  # Set default color to blue
+    # Highlight "portfolio" in red
+    portfolio_index = sharpes.index.get_loc('portfolio')  # Get the index of 'portfolio'
+    ax.patches[portfolio_index].set_color('red')
     st.pyplot(fig)
-    returns = returns.drop('portfolio', axis =1)
+
 
     "Sharpe Ratio describes how much excess return you receive for the volatility of holding your assets. A higher Sharpe Ratio indicates that the asset has better risk-adjusted performance."
 
