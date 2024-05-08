@@ -53,8 +53,9 @@ with tab1:
         weights = [1/12] * 12
         weights = np.array(weights)
     else:
-        weights = [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.2, 0.2, 0.1, 0.1]
-        weights = np.array(weights)
+        weights = np.array([1/(len(cryptos)-2) * 0.70] * len(cryptos))  # distribute remaining 70% equally among others
+        weights[cryptos.index('Ethereum')] = 0.15
+        weights[cryptos.index('BNB')] = 0.15
 
 
 with tab2:
